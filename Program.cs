@@ -33,6 +33,14 @@ namespace LabExercise01
             // Sort words into alphabetical order
             List<string> words = data.Split(" ").ToList();
             words.Sort();
+            // Write new string to text file
+            using (var writer = new StreamWriter("output.txt"))
+            {
+                foreach (string word in words)
+                {
+                    writer.Write(word + " ");
+                }
+            }
             // Write string to console
             Console.WriteLine(data);
         }
