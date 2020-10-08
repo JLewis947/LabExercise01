@@ -8,6 +8,11 @@ namespace LabExercise01
         static void Main(string[] args)
         {
             if (File.Exists("input.txt")) Console.WriteLine("File Exists");
+            string data = null;
+            using (var reader = new StreamReader("input.txt"))
+            {
+                data = reader.ReadToEnd();
+            }
         }
     }
 }
