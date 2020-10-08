@@ -24,6 +24,8 @@ namespace LabExercise01
                     data = data.Replace(c, empty);
                 }
             }
+            // Make all letters lowercase
+            data = data.ToLower();
             // Write string to console
             Console.WriteLine(data);
         }
